@@ -1,27 +1,5 @@
 <?php
-    if(isset($_POST['submit'])){
-        include 'connect.php';
-        $username=$_POST['Username'];
-        $password=$_POST['Password'];
-
-        $sql="SELECT * FROM user WHERE username='$username'and password='$password'";
-
-        $result=$con->query($sql);
-        $row=mysqli_fetch_array($result);
-
-        $num=mysqli_num_rows($result);
-        if($num==0){
-            echo "<script>alert('username หรือ password ไม่ถูกต้อง')</script>";
-        }
-        else{
-            session_start();
-            $_SESSION['username']=$row['username'];
-            $_SESSION['name']=$row['name'];
-            header("location:admin/index.php");
-        }
-    }
-
-
+    include 'navbar.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -29,27 +7,103 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link rel="icon" type="image/x-icon" href="favicon.ico"><title>Home Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="admin/test/css/styles.css" rel="stylesheet" />
 </head>
-<body style="background:#ddd">
-    <div class="container w-25" style="margin-top:150px;">
-        <div class="card">
-            <div class="card-header bg-success text-white">login</div>
-            <div class="card-body">
-                <form action="<?php $_SERVER['PHP_SELF']?>" method="POST">
-                    <div class="mb-3">
-                        <label for="" class="form-label">Username</label>
-                        <input type="text" class="form-control" name="Username">
-                    </div>
-                    <div class="mb-3">
-                        <label for="" class="form-label">Password</label>
-                        <input type="Password" class="form-control" name="Password">
-                    </div>
-                    <button type="submit" name="submit" class="btn btn-primary">login</button>
-                </form>
+<body>
+    <header class="bg-dark py-5">
+            <div class="container px-4 px-lg-5 my-5">
+                <div class="text-center text-white">
+                    <h1 class="display-4 fw-bolder">KFC Shop</h1>
+                    <p class="lead fw-normal text-white-50 mb-0">The best chicken in the town</p>
+                </div>
             </div>
-        </div>
-    </div>
+    </header>
+
+    <section class="py-5">
+        <div class="container px-4 px-lg-5 mt-5">
+            <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
+                <div class="col mb-5">
+                    <div class="card h-100">
+                        <!-- Product image-->
+                        <img class="card-img-top" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="..." />
+                        <!-- Product details-->
+                        <div class="card-body p-4">
+                            <div class="text-center">
+                                <!-- Product name-->
+                                <h5 class="fw-bolder">The Box set 1</h5>
+                                <!-- Product price-->
+                                $40.00 - $80.00
+                            </div>
+                        </div>
+                        <!-- Product actions-->
+                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                            <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">View options</a></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col mb-5">
+                    <div class="card h-100">
+                        <!-- Product image-->
+                        <img class="card-img-top" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="..." />
+                        <!-- Product details-->
+                        <div class="card-body p-4">
+                            <div class="text-center">
+                                <!-- Product name-->
+                                <h5 class="fw-bolder">The Box set 2</h5>
+                                <!-- Product price-->
+                                $40.00 - $80.00
+                            </div>
+                        </div>
+                        <!-- Product actions-->
+                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                            <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">View options</a></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col mb-5">
+                    <div class="card h-100">
+                        <!-- Product image-->
+                        <img class="card-img-top" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="..." />
+                        <!-- Product details-->
+                        <div class="card-body p-4">
+                            <div class="text-center">
+                                <!-- Product name-->
+                                <h5 class="fw-bolder">The Box set 3</h5>
+                                <!-- Product price-->
+                                $40.00 - $80.00
+                            </div>
+                        </div>
+                        <!-- Product actions-->
+                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                            <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">View options</a></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col mb-5">
+                    <div class="card h-100">
+                        <!-- Product image-->
+                        <img class="card-img-top" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="..." />
+                        <!-- Product details-->
+                        <div class="card-body p-4">
+                            <div class="text-center">
+                                <!-- Product name-->
+                                <h5 class="fw-bolder">The Box set 4</h5>
+                                <!-- Product price-->
+                                $40.00 - $80.00
+                            </div>
+                        </div>
+                        <!-- Product actions-->
+                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                            <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">View options</a></div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div> 
+    </section>
 </body>
 </html>
