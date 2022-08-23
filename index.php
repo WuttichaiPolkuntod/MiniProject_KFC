@@ -13,7 +13,7 @@
     <link href="admin/test/css/styles.css" rel="stylesheet" />
 </head>
 <body>
-    <header class="bg-dark py-5">
+    <header class="bg-danger py-5">
             <div class="container px-4 px-lg-5 my-5">
                 <div class="text-center text-white">
                     <h1 class="display-4 fw-bolder">KFC Shop</h1>
@@ -26,82 +26,81 @@
         <div class="container px-4 px-lg-5 mt-5">
             <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
                 <div class="col mb-5">
-                    <div class="card h-100">
+                    <div class="card h-100 bg-danger">
                         <!-- Product image-->
                         <img class="card-img-top" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="..." />
                         <!-- Product details-->
                         <div class="card-body p-4">
-                            <div class="text-center">
+                            <div class="text-center text-white">
                                 <!-- Product name-->
-                                <h5 class="fw-bolder">The Box set 1</h5>
+                                <h5 class="fw-bolder text-white">The Box set 1</h5>
                                 <!-- Product price-->
                                 $40.00 - $80.00
                             </div>
                         </div>
                         <!-- Product actions-->
                         <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                            <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">View options</a></div>
+                            <div class="text-center"><a class="btn btn-outline-Light mt-auto text-white" href="#">View options</a></div>
                         </div>
                     </div>
                 </div>
                 <div class="col mb-5">
-                    <div class="card h-100">
+                    <div class="card h-100 bg-danger">
                         <!-- Product image-->
                         <img class="card-img-top" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="..." />
                         <!-- Product details-->
                         <div class="card-body p-4">
-                            <div class="text-center">
+                            <div class="text-center text-white">
                                 <!-- Product name-->
-                                <h5 class="fw-bolder">The Box set 2</h5>
+                                <h5 class="fw-bolder text-white">The Box set 2</h5>
                                 <!-- Product price-->
                                 $40.00 - $80.00
                             </div>
                         </div>
                         <!-- Product actions-->
                         <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                            <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">View options</a></div>
+                            <div class="text-center"><a class="btn btn-outline-Light mt-auto text-white" href="#">View options</a></div>
                         </div>
                     </div>
                 </div>
                 <div class="col mb-5">
-                    <div class="card h-100">
+                    <div class="card h-100 bg-danger">
                         <!-- Product image-->
                         <img class="card-img-top" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="..." />
                         <!-- Product details-->
                         <div class="card-body p-4">
-                            <div class="text-center">
+                            <div class="text-center text-white">
                                 <!-- Product name-->
-                                <h5 class="fw-bolder">The Box set 3</h5>
+                                <h5 class="fw-bolder text-white">The Box set 3</h5>
                                 <!-- Product price-->
                                 $40.00 - $80.00
                             </div>
                         </div>
                         <!-- Product actions-->
                         <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                            <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">View options</a></div>
+                            <div class="text-center"><a class="btn btn-outline-Light mt-auto text-white" href="#">View options</a></div>
                         </div>
                     </div>
                 </div>
                 <div class="col mb-5">
-                    <div class="card h-100">
+                    <div class="card h-100 bg-danger">
                         <!-- Product image-->
                         <img class="card-img-top" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="..." />
                         <!-- Product details-->
                         <div class="card-body p-4">
-                            <div class="text-center">
+                            <div class="text-center text-white">
                                 <!-- Product name-->
-                                <h5 class="fw-bolder">The Box set 4</h5>
+                                <h5 class="fw-bolder text-white">The Box set 4</h5>
                                 <!-- Product price-->
                                 $40.00 - $80.00
                             </div>
                         </div>
                         <!-- Product actions-->
                         <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                            <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">View options</a></div>
+                            <div class="text-center"><a class="btn btn-outline-Light mt-auto text-white" href="#">View options</a></div>
                         </div>
                     </div>
-                </div>
-                
+                </div>                
             </div>
         </div> 
     </section>
