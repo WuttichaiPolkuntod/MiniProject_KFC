@@ -12,7 +12,7 @@
                         <li class="nav-item"><a class="nav-link text-white" href="#!">Product</a></li>
                         <li class="nav-item"><a class="nav-link text-white" href="admin/user_admin.php">User</a></li>
                     </ul>
-                    <form class="d-flex mx-3">
+                    <div class="d-flex mx-3">
                         <?php
                             session_start();
                             $name=$_SESSION['name'];
@@ -26,7 +26,7 @@
                                     ?>    
                                 </a>
                             </li>
-                            <li class="nav-item">
+                            <li class="nav-link">
                                 <a class="btn btn-outline-light text-white" href="logout.php">Logout</a>
                             </li>    
                         </ul>
@@ -34,15 +34,15 @@
                         else {?>
                         <a href="admin/login-form-14/login.php" class="btn btn-outline-light">Login</a>
                         <?php } ?>
-                    </form>
+                        </div>
 
-                    <form class="d-flex">
+                    <div class="d-flex">
                         <button class="btn btn-outline-light" type="submit">
                             <i class="bi-cart-fill me-1"></i>
                             Cart
                             <span class="badge bg-light text-black ms-1 rounded-pill">0</span>
                         </button>
-                    </form>
+                    </div>
                 </div>
             </div>
         </nav>
