@@ -15,7 +15,7 @@
                     <div class="d-flex mx-3">
                         <?php
                             session_start();
-                            $name=$_SESSION['name'];
+                            @$name=$_SESSION['name'];
                             if($name!=""){
                         ?>
                         <ul class="navbar-nav">

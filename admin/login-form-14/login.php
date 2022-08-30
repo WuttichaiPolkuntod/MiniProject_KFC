@@ -14,7 +14,7 @@
             session_start();
             $_SESSION['username']=$row['username'];
             $_SESSION['name']=$row['name'];
-            header("location:../../index.php");
+            header("location:../index.php");
         }
     }
 ?>
