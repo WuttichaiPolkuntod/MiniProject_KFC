@@ -1,3 +1,23 @@
+<?php
+    if(isset($_POST['submit'])){
+        include '../../connect.php';
+        $username=$_POST['Username'];
+        $password=$_POST['Password'];
+        $sql="SELECT * FROM user WHERE username='$username'and password='$password'";
+        $result=$con->query($sql);
+        $row=mysqli_fetch_array($result);
+        $num=mysqli_num_rows($result);
+        if($num==0){
+            echo "<script>alert('username หรือ password ไม่ถูกต้อง')</script>";
+        }
+        else{
+            session_start();
+            $_SESSION['username']=$row['username'];
+            $_SESSION['name']=$row['name'];
+            header("location:../../index.php");
+        }
+    }
+?>
 <!doctype html>
 <html lang="en">
   <head>
@@ -33,17 +53,17 @@
 									</p>
 								</div>
 			      	</div>
-							<form action="#" class="signin-form">
+							<form action="<?php $_SERVER['PHP_SELF']?>" method="POST">
 			      		<div class="form-group mb-3">
 			      			<label class="label" for="name">Username</label>
-			      			<input type="text" class="form-control" placeholder="Username" required>
+			      			<input type="text" class="form-control" name="Username">
 			      		</div>
 		            <div class="form-group mb-3">
 		            	<label class="label" for="password">Password</label>
-		              <input type="password" class="form-control" placeholder="Password" required>
+		              <input type="password" class="form-control" name="Password">
 		            </div>
 		            <div class="form-group">
-		            	<button type="submit" class="form-control btn btn-primary rounded submit px-3">Sign In</button>
+		            	<button type="submit" name="submit" class="form-control btn btn-primary rounded submit px-3">Sign In</button>
 		            </div>
 		            <div class="form-group d-md-flex">
 		            	<div class="w-50 text-left">

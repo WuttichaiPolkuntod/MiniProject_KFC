@@ -9,10 +9,33 @@
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
                         <li class="nav-item"><a class="nav-link active text-white" aria-current="page" href="#!">หน้าแรก</a></li>
                         <li class="nav-item"><a class="nav-link text-white" href="#!">About</a></li>
+                        <li class="nav-item"><a class="nav-link text-white" href="#!">Product</a></li>
+                        <li class="nav-item"><a class="nav-link text-white" href="admin/user_admin.php">User</a></li>
                     </ul>
                     <form class="d-flex mx-3">
+                        <?php
+                            session_start();
+                            $name=$_SESSION['name'];
+                            if($name!=""){
+                        ?>
+                        <ul class="navbar-nav">
+                            <li class="nav-link">
+                                <a class="btn text-white btn-outline-light" href="">
+                                    <?php
+                                        echo $name;
+                                    ?>    
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="btn btn-outline-light text-white" href="logout.php">Logout</a>
+                            </li>    
+                        </ul>
+                        <?php }
+                        else {?>
                         <a href="admin/login-form-14/login.php" class="btn btn-outline-light">Login</a>
+                        <?php } ?>
                     </form>
+
                     <form class="d-flex">
                         <button class="btn btn-outline-light" type="submit">
                             <i class="bi-cart-fill me-1"></i>
