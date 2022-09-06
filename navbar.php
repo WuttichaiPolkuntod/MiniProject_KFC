@@ -31,7 +31,6 @@
                         <?php }
                         else {?>
                         <a href="login.php" class="btn btn-outline-light">Log in</a>
-                        <a href="admin/login-form-14/login.php" class="btn btn-outline-light">Log in</a>
                         <?php } ?>
                         </div>
 
