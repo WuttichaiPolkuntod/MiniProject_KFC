@@ -27,12 +27,12 @@
                                 </a>
                             </li>
                             <li class="nav-link">
-                                <a class="btn btn-outline-light text-white" href="logout.php">Logout</a>
+                                <a class="btn btn-outline-light text-white" href="logout.php">Log out</a>
                             </li>    
                         </ul>
                         <?php }
                         else {?>
-                        <a href="admin/login-form-14/login.php" class="btn btn-outline-light">Login</a>
+                        <a href="admin/login-form-14/login.php" class="btn btn-outline-light">Log in</a>
                         <?php } ?>
                         </div>
 
