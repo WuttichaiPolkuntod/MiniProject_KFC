@@ -17,7 +17,7 @@
                 $result2=$con->query($sql2);
                 $num=mysqli_num_rows($result2);
                 if($num==1){
-                    echo "<script>alert('username นี้มีอยู่แล้ว')</script>";
+                    echo "<script>alert('Username นี้มีอยู่แล้ว')</script>";
                 }
                 else{
                     if(move_uploaded_file($_FILES['user_pic']['tmp_name'],'user_pic/'.$filename)){
@@ -38,29 +38,29 @@
 ?> 
 <div class="container w-50 mt-5">
     <div class="card">
-        <div class="card-header bg-danger text-white">เพิ่มข้อมูล user</div>
+        <div class="card-header bg-danger text-white">เพิ่มข้อมูล User</div>
         <div class="card-body">
             <form action="<?php $_SERVER['PHP_SELF']?>" method="POST" enctype="multipart/form-data">
                 <div class="mb-3 row">
-                    <label class="label col-sm-2 com-form-label">username</label>
+                    <label class="label col-sm-2 com-form-label">Username</label>
                     <div class="col-sm-10">
                         <input type="text" class="form*control" name="username">
                     </div>
                 </div>
                 <div class="mb-3 row">
-                    <label class="label col-sm-2 com-form-label">password</label>
+                    <label class="label col-sm-2 com-form-label">Password</label>
                     <div class="col-sm-10">
                         <input type="password" class="form*control" name="password">
                     </div>
                 </div>
                 <div class="mb-3 row">
-                    <label class="label col-sm-2 com-form-label">name</label>
+                    <label class="label col-sm-2 com-form-label">Name</label>
                     <div class="col-sm-10">
                         <input type="text" class="form*control" name="name">
                     </div>
                 </div>
                 <div class="mb-3 row">
-                    <label class="label col-sm-2 com-form-label">email</label>
+                    <label class="label col-sm-2 com-form-label">E-mail</label>
                     <div class="col-sm-10">
                         <input type="email" class="form*control" name="email">
                     </div>
