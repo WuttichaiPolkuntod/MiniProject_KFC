@@ -9,6 +9,8 @@
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
                         <li class="nav-item"><a class="nav-link active text-white" aria-current="page" href="#!">หน้าแรก</a></li>
                         <li class="nav-item"><a class="nav-link text-white" href="#!">About</a></li>
+                        <li class="nav-item"><a class="nav-link text-white" href="#!">Product</a></li>
+                        <li class="nav-item"><a class="nav-link text-white" href="user_admin.php">User</a></li>
                     </ul>
                     <div class="d-flex mx-3">
                         <?php
@@ -25,7 +27,7 @@
                                 </a>
                             </li>
                             <li class="nav-link">
-                                <a class="btn btn-outline-light text-white" href="logout.php">Log out</a>
+                                <a class="btn btn-outline-light text-white" href="../logout.php">Log out</a>
                             </li>    
                         </ul>
                         <?php }

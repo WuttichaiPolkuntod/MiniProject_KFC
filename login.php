@@ -1,20 +1,32 @@
 <?php
     if(isset($_POST['submit'])){
-        include '../../connect.php';
+        include 'connect.php';
         $username=$_POST['Username'];
         $password=$_POST['Password'];
-        $sql="SELECT * FROM user WHERE username='$username'and password='$password'";
+        $sql="SELECT * FROM customer WHERE cus_id='$username'and cus_password='$password'";
         $result=$con->query($sql);
         $row=mysqli_fetch_array($result);
         $num=mysqli_num_rows($result);
-        if($num==0){
+		$sql2="SELECT * FROM user WHERE username='$username'and password='$password'";
+        $result2=$con->query($sql2);
+		$row2=mysqli_fetch_array($result2);
+        $num2=mysqli_num_rows($result2);
+        if($num==0 && $num2==0){
             echo "<script>alert('username หรือ password ไม่ถูกต้อง')</script>";
         }
         else{
-            session_start();
-            $_SESSION['username']=$row['username'];
-            $_SESSION['name']=$row['name'];
-            header("location:../index.php");
+			if($num2==1){
+				session_start();
+            	$_SESSION['username']=$row2['username'];
+            	$_SESSION['name']=$row2['name'];
+				header("location:admin/index.php");
+			}
+			else{
+				session_start();
+            	$_SESSION['username']=$row['cus_id'];
+            	$_SESSION['name']=$row['cus_name'];
+				header("location:index.php");
+			}
         }
     }
 ?>
@@ -29,17 +41,17 @@
 
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 	
-	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="admin/login/css/style.css">
 
 	</head>
 	<body>
-	<div class="container-login" style="background-image: url(images/bg-login.png);">
+	<div class="container-login" style="background-image: url(admin/login/images/bg-login.png);">
 	<section class="ftco-section">
 		<div class="container">
 			<div class="row justify-content-center">
 				<div class="col-md-12 col-lg-10">
 					<div class="wrap d-md-flex border border-5 border-dark">
-						<div class="img" style="background-image: url(images/login.jpg);">
+						<div class="img" style="background-image: url(admin/login/images/login.jpg);">
 			      </div>
 						<div class="login-wrap p-4 p-md-5">
 			      	<div class="d-flex">
@@ -85,10 +97,10 @@
 		</div>
 	</section>
 	</div>
-	<script src="js/jquery.min.js"></script>
-  <script src="js/popper.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-  <script src="js/main.js"></script>
+	<script src="admin/login/js/jquery.min.js"></script>
+  <script src="admin/login/js/popper.js"></script>
+  <script src="admin/login/js/bootstrap.min.js"></script>
+  <script src="admin/login/js/main.js"></script>
 
 	</body>
 </html>
