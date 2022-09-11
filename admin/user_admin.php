@@ -3,26 +3,49 @@
     include '../connect.php';
     $sql="SELECT * FROM user";
     $result=$con->query($sql);
+    # adduser
+    if(isset($_POST['addsubmit'])){
+        $username=$_POST['username'];
+        $password=$_POST['password'];
+        $name=$_POST['name'];
+        $email=$_POST['email'];
+        $filename=$_FILES['user_pic']['name'];
+        if($username==""||$password==""||$name==""||$email==""||$filename=="")
+        {
+            echo "<script>alert('คุณกรอกข้อมูลไม่ครบ')</script>";
+        }
+            else
+            {
+                $sql2="SELECT username FROM user WHERE username='$username'";
+                $result2=$con->query($sql2);
+                $num=mysqli_num_rows($result2);
+                if($num==1){
+                    echo "<script>alert('Username นี้มีอยู่แล้ว')</script>";
+                }
+                else{
+                    if(move_uploaded_file($_FILES['user_pic']['tmp_name'],'user_pic/'.$filename)){
+
+                    $sql="INSERT  INTO user (username,password,name,email,user_pic) VALUES('$username','$password','$name','$email','$filename')";
+                    $result=$con->query($sql);
+                    if(!$result){
+                    echo "<script>alert('ไม่สามารถเพิ่มข้อมูลได้')</script>";
+                    }
+                    else{
+                    echo "<script>window.location.href='user_admin.php'</script>";
+                    }   
+                    }
+                }
+            }
+    }
+    # adduser
 ?> 
 <div class="container mt-5 w-75">
 <div class="row">
         <div class="col-4">
-            <a href="add_User.php" class="btn btn-danger mb-3">+เพิ่มข้อมูล</a>
-        </div>
-        <div class="col-8">
-            <form action="user_uploadcsv.php" method="POST" enctype="multipart/form-data">
-            <div class="row">
-            <div class="col-3">
-                    <label for="" class="">อัพโหลดโหลดไฟล์</label>
-                </div>
-                <div class="col-5">
-                    <input type="file" class="form-control" class="mb-3" name="csv_file">
-                </div>
-                <div class="col-4">
-                    <input type="submit" name="addm" class="btn btn-danger mb-3" value="+เพิ่มข้อมูลที่ละหลายคน">
-                </div>
-            </div>
-            </form>
+            <!-- Button trigger modal -->
+            <button type="button" class="btn btn-danger mb-3" data-bs-toggle="modal" data-bs-target="#adduser">
+            Add User
+            </button>
         </div>
     </div>
     <table class="table table-striped">
@@ -54,3 +77,53 @@
         <?php } ?>
     </table>
 </div>
+<!-- AddUser Modal -->
+<div class="modal fade" id="adduser" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header  bg-danger">
+        <h5 class="modal-title text-white" id="exampleModalLabel">เพิ่มข้อมูล User</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+      <form action="<?php $_SERVER['PHP_SELF']?>" method="POST" enctype="multipart/form-data">
+                <div class="mb-3 row">
+                    <label class="label col-sm-2 com-form-label">Username</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form*control" name="username">
+                    </div>
+                </div>
+                <div class="mb-3 row">
+                    <label class="label col-sm-2 com-form-label">Password</label>
+                    <div class="col-sm-10">
+                        <input type="password" class="form*control" name="password">
+                    </div>
+                </div>
+                <div class="mb-3 row">
+                    <label class="label col-sm-2 com-form-label">Name</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form*control" name="name">
+                    </div>
+                </div>
+                <div class="mb-3 row">
+                    <label class="label col-sm-2 com-form-label">E-mail</label>
+                    <div class="col-sm-10">
+                        <input type="email" class="form*control" name="email">
+                    </div>
+                </div>
+                <div class="mb-3 row">
+                    <label class="label col-sm-2 com-form-label"></label>
+                    <div class="col-sm-10">
+                        <input type="file" class="form-control" name="user_pic">
+                    </div>
+                </div>
+      </div>
+      <div class="modal-footer">
+            <input type="submit" class="btn bg-danger text-white" name="addsubmit" value="เพิ่มข้อมูล">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- AddUser Modal -->

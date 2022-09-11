@@ -3,8 +3,6 @@
     include 'connect.php';
     $sql="SELECT * FROM product";
     $result=$con->query($sql);
-    $row=mysqli_fetch_array($result);
-    $num=mysqli_num_rows($result);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -31,7 +29,7 @@
         <div class="container px-4 px-lg-5 mt-5">
             <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
             <?php
-            $counter=0;
+            $counter=1;
             while(($row=mysqli_fetch_array($result))){
             ?>
                 <div class="col mb-5">

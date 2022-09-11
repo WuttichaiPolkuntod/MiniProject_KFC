@@ -1,9 +1,7 @@
 <?php
     include 'navbar_admin.php';
     include '../connect.php';
-    $sql="SELECT * FROM product";
-    $result=$con->query($sql);
-    if(isset($_POST['addsubmit'])){
+    if(isset($_POST['submit'])){
         $pro_name=$_POST['name'];
         $pro_type=$_POST['type'];
         $pro_price=$_POST['price'];
@@ -24,7 +22,7 @@
                 }
                 else{
                     if(move_uploaded_file($_FILES['pro_pic']['tmp_name'],'product_pic/'.$filename)){
-                        $sql="INSERT  INTO product (pro_name,pro_type,details,pro_price,amount,pro_pic) VALUES('$pro_name','$pro_type','$details','$pro_price','$amount','$filename')";
+                        $sql="INSERT  INTO product (pro_name,pro_type,details,pro_price,amount,pro_pic) VALUES('$pro_name','$pro_type','$details','$pro_price','$pro_qty','$filename')";
                         $result=$con->query($sql);
                         if(!$result){
                             echo "<script>alert('ไม่สามารถเพิ่มข้อมูลได้')</script>";
@@ -34,7 +32,7 @@
                             }  
                         }
                         else{
-                            $sql="INSERT  INTO product (pro_name,pro_type,details,pro_price,amount) VALUES('$pro_name','$pro_type','$details','$pro_price','$amount')";
+                            $sql="INSERT  INTO product (pro_name,pro_type,details,pro_price,amount) VALUES('$pro_name','$pro_type','$details','$pro_price','$pro_qty')";
                             $result=$con->query($sql);
                             if(!$result){
                                 echo "<script>alert('ไม่สามารถเพิ่มข้อมูลได้')</script>";
@@ -46,57 +44,13 @@
                 }
             }
     }
-?> 
-<div class="container mt-5 w-75">
-<div class="row">
-    <div class="col-4">
-        <button type="button" class="btn btn-danger mb-3" data-bs-toggle="modal" data-bs-target="#addproduct">
-            Add New Product
-        </button>
-    </div>
-</div>
-    <table class="table table-striped">
-        <tr class="bg-danger">
-            <th class="text-white" >ลำดับที่</th>
-            <th class="text-white">ชื่อสินค้า</th>
-            <th class="text-white">ประเภทสินค้า</th>
-            <th class="text-white">รายละเอือด</th>
-            <th class="text-white">ราคา</th>
-            <th class="text-white">จำนวน</th>
-            <th class="text-white">รูปภาพ</th>
-            <th class="text-white">การจัดการ</th>
-        </tr>
-        <?php
-            while($row=mysqli_fetch_array($result)){
-        ?>
-        <tr>
-            <td><?php echo $row['pro_id'] ?></td>
-            <td><?php echo $row['pro_name'] ?></td>
-            <td><?php echo $row['pro_type'] ?></td>
-            <td><?php echo $row['details'] ?></td>
-            <td><?php echo $row['pro_price'] ?></td>
-            <td><?php echo $row['amount'] ?></td>
-            <td>
-                <img src="pro_pic/<?php echo $row['pro_pic'] ?>" width="150">
-            </td>
-            <td>
-            <a href="edit_product.php?pro_id=<?php echo $row['pro_id']?>" class="btn bg-warning"><i class="bi bi-pencil-square"></i></a>
-                <a href="del_product.php?pro_id=<?php echo $row['pro_id']?>" class="btn bg-danger" onclick=" return confirm('ยืนยันการลบไหม')"><i class="bi bi-x-square-fill"></i></a>
-            </td>
-        </tr>
-        <?php } ?>
-    </table>
-</div>
-<!-- Addproduct Modal -->
-<div class="modal fade" id="addproduct" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-lg modal-dialog-centered">
-    <div class="modal-content">
-      <div class="modal-header  bg-danger">
-        <h5 class="modal-title text-white" id="exampleModalLabel">เพิ่มข้อมูล product</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-      <form action="<?php $_SERVER['PHP_SELF']?>" method="POST" enctype="multipart/form-data">
+?>
+
+<div class="container w-50 mt-5">
+    <div class="card">
+        <div class="card-header bg-success text-white">เพิ่มข้อมูล สินค้า</div>
+        <div class="card-body">
+            <form action="<?php $_SERVER['PHP_SELF']?>" method="POST" enctype="multipart/form-data">
             <div class="mb-3 row">
                     <label class="label col-sm-2 com-form-label">ชื่อสินค้า</label>
                     <div class="col-sm-10">
@@ -129,16 +83,17 @@
                 </div>
                 <div class="mb-3 row">
                     <label class="label col-sm-2 com-form-label"></label>
-                    <div class="col-sm-9">
+                    <div class="col-sm-10">
                         <input type="file" class="form-control" name="pro_pic">
                     </div>
                 </div>
-      <div class="modal-footer">
-            <input type="submit" class="btn bg-danger text-white" name="addsubmit" value="เพิ่มข้อมูล">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        </form>
-      </div>
+                <div class="mb-3 row">
+                    <label class="label col-sm-2 com-form-label"></label>
+                    <div class="col-sm-10">
+                        <input type="submit" class="btn bg-success text-white" name="submit" value="เพิ่มข้อมูล">
+                    </div>
+                </div>
+            </form>
+        </div>
     </div>
-  </div>
 </div>
-<!-- Addproduct Modal -->

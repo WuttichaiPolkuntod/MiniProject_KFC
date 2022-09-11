@@ -23,7 +23,7 @@
             echo"<script>alert('ไม่สามารถบันทึกข้อมูลได้')</script>";
         }
         else{
-            echo "<script>window.location.href='user.php'</script>";
+            echo "<script>window.location.href='user_admin.php'</script>";
         }
     }
 ?> 
