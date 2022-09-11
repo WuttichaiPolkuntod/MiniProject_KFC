@@ -28,7 +28,7 @@
                     echo "<script>alert('ไม่สามารถเพิ่มข้อมูลได้')</script>";
                     }
                     else{
-                    echo "<script>window.location.href='../index.php'</script>";
+                    echo "<script>window.location.href='index.php'</script>";
                     }   
                     }
                 }
