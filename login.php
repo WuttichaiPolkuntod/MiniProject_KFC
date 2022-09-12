@@ -12,7 +12,7 @@
 		$row2=mysqli_fetch_array($result2);
         $num2=mysqli_num_rows($result2);
         if($num==0 && $num2==0){
-            echo "<script>alert('username หรือ password ไม่ถูกต้อง')</script>";
+            echo "<script>alert('Username หรือ Password ไม่ถูกต้อง')</script>";
         }
         else{
 			if($num2==1){
@@ -33,7 +33,7 @@
 <!doctype html>
 <html lang="en">
   <head>
-  	<title>Login</title>
+  	<title>Log in</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -85,11 +85,11 @@
 										</label>
 									</div>
 									<div class="w-50 text-md-right">
-										<a href="#">Forgot Password</a>
+										<a href="#">Forgot Password ?</a>
 									</div>
 		            </div>
 		          </form>
-		          <p class="text-center">Not a member? <a data-toggle="tab" href="#signup">Sign Up</a></p>
+		          <p class="text-center">Don't have an account? <a data-toggle="tab" href="#signup">Sign Up</a></p>
 		        </div>
 		      </div>
 				</div>
