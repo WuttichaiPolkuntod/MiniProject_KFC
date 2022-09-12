@@ -34,6 +34,16 @@
                     echo "<script>window.location.href='user_admin.php'</script>";
                     }   
                     }
+                    else{
+                        $sql="INSERT  INTO user (username,password,name,email) VALUES('$username','$password','$name','$email')";
+                        $result=$con->query($sql);
+                        if(!$result){
+                        echo "<script>alert('ไม่สามารถเพิ่มข้อมูลได้')</script>";
+                        }
+                        else{
+                        echo "<script>window.location.href='user_admin.php'</script>";
+                        }   
+                    }
                 }
             }
     }
