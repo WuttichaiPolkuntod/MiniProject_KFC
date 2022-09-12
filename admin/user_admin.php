@@ -80,7 +80,7 @@
                 <img src="user_pic/<?php echo $row['user_pic'] ?>" width="150">
             </td>
             <td>
-                <a href="edit_user.php?username=<?php echo $row['username']?>" class="btn bg-warning"><i class="bi bi-pencil-square"></i></a>
+                <a href="edit_user.php?username=<?php echo $row['username']?>" class="btn bg-warning "><i class="bi bi-pencil-square"></i></a>
                 <a href="del_user.php?username=<?php echo $row['username']?>" class="btn bg-danger" onclick=" return confirm('ยืนยันการลบ ?')"><i class="bi bi-x-square-fill"></i></a>
             </td>
         </tr>
