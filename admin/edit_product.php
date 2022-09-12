@@ -69,7 +69,7 @@
                 <div class="mb-3 row">
                     <label class="label col-sm-2 com-form-label"></label>
                     <div class="col-sm-10">
-                        <img src="pro_pic/<?php echo $row['pro_pic']?>" width="150px">
+                        <img src="product_pic/<?php echo $row['pro_pic']?>" width="150px">
                     </div>
                 </div>
                 <div class="mb-3 row">
