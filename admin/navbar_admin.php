@@ -29,11 +29,11 @@
                             </li>
                             <li class="nav-link">
                                 <a class="btn btn-outline-light text-white" href="../logout.php">Log out</a>
-                            </li>    
+                            </li>  
                         </ul>
                         <?php }
                         else {?>
-                        <a href="login.php" class="btn btn-outline-light">Log in</a>
+                        <a href="login.php" class="btn btn-outline-light text-black">Log in</a>
                         <?php } ?>
                         </div>
                 </div>

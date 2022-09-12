@@ -30,29 +30,29 @@
 
 <div class="container w-50 mt-5">
     <div class="card">
-        <div class="card-header bg-warning text-dark">แก้ไขข้อมูล user</div>
+        <div class="card-header bg-warning text-dark">แก้ไขข้อมูล User</div>
         <div class="card-body">
             <form action="<?php $_SERVER['PHP_SELF']?>" method="POST" enctype="multipart/form-data">
                 <div class="mb-3 row">
-                    <label class="label col-sm-2 com-form-label">username</label>
+                    <label class="label col-sm-2 com-form-label">Username</label>
                     <div class="col-sm-10">
                         <input type="text" class="form*control" name="username" readonly value="<?php echo $row['username']?>">
                     </div>
                 </div>
                 <div class="mb-3 row">
-                    <label class="label col-sm-2 com-form-label">password</label>
+                    <label class="label col-sm-2 com-form-label">Password</label>
                     <div class="col-sm-10">
                         <input type="password" class="form*control" name="password" value="<?php echo $row['password']?>">
                     </div>
                 </div>
                 <div class="mb-3 row">
-                    <label class="label col-sm-2 com-form-label">name</label>
+                    <label class="label col-sm-2 com-form-label">Name</label>
                     <div class="col-sm-10">
                         <input type="text" class="form*control" name="name" value="<?php echo $row['name']?>">
                     </div>
                 </div>
                 <div class="mb-3 row">
-                    <label class="label col-sm-2 com-form-label">email</label>
+                    <label class="label col-sm-2 com-form-label">E-mail</label>
                     <div class="col-sm-10">
                         <input type="email" class="form*control" name="email" value="<?php echo $row['email']?>">
                     </div>

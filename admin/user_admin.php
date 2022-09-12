@@ -3,7 +3,7 @@
     include '../connect.php';
     $sql="SELECT * FROM user";
     $result=$con->query($sql);
-    # adduser
+    # Adduser
     if(isset($_POST['addsubmit'])){
         $username=$_POST['username'];
         $password=$_POST['password'];
@@ -47,7 +47,7 @@
                 }
             }
     }
-    # adduser
+    # Adduser
 ?> 
 <div class="container mt-5 w-75">
 <div class="row">
@@ -60,10 +60,10 @@
     </div>
     <table class="table table-striped">
         <tr class="bg-danger">
-            <th class="text-white" >ลำดับที่</th>
+            <th class="text-white">ลำดับที่</th>
             <th class="text-white">ชื่อ - นามสกุล</th>
-            <th class="text-white">username</th>
-            <th class="text-white">email</th>
+            <th class="text-white">Username</th>
+            <th class="text-white">E-mail</th>
             <th class="text-white">รูปภาพ</th>
             <th class="text-white">การจัดการ</th>
         </tr>
@@ -81,12 +81,13 @@
             </td>
             <td>
                 <a href="edit_user.php?username=<?php echo $row['username']?>" class="btn bg-warning"><i class="bi bi-pencil-square"></i></a>
-                <a href="del_user.php?username=<?php echo $row['username']?>" class="btn bg-danger" onclick=" return confirm('ยืนยันการลบไหม')"><i class="bi bi-x-square-fill"></i></a>
+                <a href="del_user.php?username=<?php echo $row['username']?>" class="btn bg-danger" onclick=" return confirm('ยืนยันการลบ ?')"><i class="bi bi-x-square-fill"></i></a>
             </td>
         </tr>
         <?php } ?>
     </table>
 </div>
+
 <!-- AddUser Modal -->
 <div class="modal fade" id="adduser" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-lg modal-dialog-centered">

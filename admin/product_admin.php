@@ -57,10 +57,10 @@
 </div>
     <table class="table table-striped">
         <tr class="bg-danger">
-            <th class="text-white" >ลำดับที่</th>
+            <th class="text-white">ลำดับที่</th>
             <th class="text-white">ชื่อสินค้า</th>
             <th class="text-white">ประเภทสินค้า</th>
-            <th class="text-white">รายละเอือด</th>
+            <th class="text-white">รายละเอียด</th>
             <th class="text-white">ราคา</th>
             <th class="text-white">จำนวน</th>
             <th class="text-white">รูปภาพ</th>
@@ -77,22 +77,23 @@
             <td><?php echo $row['pro_price'] ?></td>
             <td><?php echo $row['amount'] ?></td>
             <td>
-                <img src="pro_pic/<?php echo $row['pro_pic'] ?>" width="150">
+                <img src="product_pic/<?php echo $row['pro_pic'] ?>" width="150">
             </td>
             <td>
             <a href="edit_product.php?pro_id=<?php echo $row['pro_id']?>" class="btn bg-warning"><i class="bi bi-pencil-square"></i></a>
-                <a href="del_product.php?pro_id=<?php echo $row['pro_id']?>" class="btn bg-danger" onclick=" return confirm('ยืนยันการลบไหม')"><i class="bi bi-x-square-fill"></i></a>
+                <a href="del_product.php?pro_id=<?php echo $row['pro_id']?>" class="btn bg-danger" onclick=" return confirm('ต้องการลบใช่หรือไม่?')"><i class="bi bi-x-square-fill"></i></a>
             </td>
         </tr>
         <?php } ?>
     </table>
 </div>
+
 <!-- Addproduct Modal -->
 <div class="modal fade" id="addproduct" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-lg modal-dialog-centered">
     <div class="modal-content">
       <div class="modal-header  bg-danger">
-        <h5 class="modal-title text-white" id="exampleModalLabel">เพิ่มข้อมูล product</h5>
+        <h5 class="modal-title text-white" id="exampleModalLabel">เพิ่มข้อมูล Product</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
@@ -110,7 +111,7 @@
                     </div>
                 </div>
                 <div class="mb-3 row">
-                    <label class="label col-sm-2 com-form-label">รายละเอือด</label>
+                    <label class="label col-sm-2 com-form-label">รายละเอียด</label>
                     <div class="col-sm-10">
                         <input type="text" class="form*control" name="details">
                     </div>

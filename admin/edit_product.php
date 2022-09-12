@@ -33,7 +33,7 @@
 
 <div class="container w-50 mt-5">
     <div class="card">
-        <div class="card-header bg-success text-white">เพิ่มข้อมูล สินค้า</div>
+        <div class="card-header bg-success text-white">แก้ไขข้อมูล Product</div>
         <div class="card-body">
             <form action="<?php $_SERVER['PHP_SELF']?>" method="POST" enctype="multipart/form-data">
                 <div class="mb-3 row">
@@ -49,7 +49,7 @@
                     </div>
                 </div>
                 <div class="mb-3 row">
-                    <label class="label col-sm-2 com-form-label">รายละเอือด</label>
+                    <label class="label col-sm-2 com-form-label">รายละเอียด</label>
                     <div class="col-sm-10">
                         <input type="text" class="form*control" name="details" value="<?php echo $row['details']?>">
                     </div>
@@ -81,7 +81,7 @@
                 <div class="mb-3 row">
                     <label class="label col-sm-2 com-form-label"></label>
                     <div class="col-sm-10">
-                        <input type="submit" class="btn bg-success text-white" name="submit" value="เพิ่มข้อมูล">
+                        <input type="submit" class="btn bg-success text-white" name="submit" value="บันทึกข้อมูล">
                     </div>
                 </div>
             </form>
