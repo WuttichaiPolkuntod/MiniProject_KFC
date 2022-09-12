@@ -9,7 +9,7 @@
     $sql="DELETE FROM product WHERE pro_id='$pro_id'";
     $result=$con->query($sql);
     if(!$result){
-        echo"<script>alert('ไม่สามารถลบได้')</script>";
+        echo"<script>alert('ไม่สามารถลบข้อมูลได้')</script>";
     }
     else{
         echo "<script>window.location.href='product_admin.php'</script>";

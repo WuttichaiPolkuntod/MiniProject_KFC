@@ -9,7 +9,7 @@
     $sql="DELETE FROM user WHERE username='$username'";
     $result=$con->query($sql);
     if(!$result){
-        echo"<script>alert('ไม่สามารถลบได้')</script>";
+        echo"<script>alert('ไม่สามารถลบข้อมูลได้')</script>";
     }
     else{
         echo "<script>window.location.href='user_admin.php'</script>";
