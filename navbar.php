@@ -1,6 +1,8 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-        <!-- Core theme CSS (includes Bootstrap)-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+       <!-- Core theme CSS (includes Bootstrap)-->
         <link href="test/css/styles.css" rel="stylesheet" />
 <nav class="navbar navbar-expand-lg navbar-light bg-danger">
             <div class="container px-4 px-lg-5">
@@ -8,12 +10,14 @@
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
-                        <li class="nav-item"><a class="nav-link active text-white" aria-current="page" href="#!">หน้าแรก</a></li>
+                        <li class="nav-item"><a class="nav-link active text-white" aria-current="page" href="index.php">หน้าแรก</a></li>
                         <li class="nav-item"><a class="nav-link text-white" href="#!">About</a></li>
+                        <li class="nav-item ">
+                          <a class="nav-link active text-white" aria-current="page" href="index.php">รายการสินค้า</a>
+                        </li>
                     </ul>
                     <div class="d-flex mx-3">
                         <?php
-                            session_start();
                             @$name=$_SESSION['name'];
                             if($name!=""){
                         ?>
@@ -36,11 +40,11 @@
                         </div>
 
                     <div class="d-flex">
-                        <button class="btn btn-outline-light" type="submit">
+                        <a class="btn btn-outline-light" type="submit" href="cart.php">
                             <i class="bi-cart-fill me-1"></i>
                             Cart
-                            <span class="badge bg-light text-black ms-1 rounded-pill">0</span>
-                        </button>
+                            <span class="badge bg-light text-black ms-1 rounded-pill"><?php echo  $meQty; ?></span>
+                        </a>
                     </div>
                 </div>
             </div>
