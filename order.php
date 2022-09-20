@@ -37,7 +37,7 @@ if (isset($_SESSION['qty'])) {
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>itoffside.com shopping cart</title>
+    <title>Shopping Cart</title>
 
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
@@ -76,6 +76,7 @@ if (isset($_SESSION['qty'])) {
 
         <!-- Static navbar -->
         <?php include 'navbar.php'?>
+        <br>
         <h3>รายการสั่งซื้อ</h3>
         <!-- Main component for a primary marketing message or call to action -->
         <?php
@@ -98,14 +99,17 @@ if (isset($_SESSION['qty'])) {
                 <label for="exampleInputEmail1">ชื่อ-นามสกุล</label>
                 <input type="text" class="form-control" id="order_fullname" placeholder="ใส่ชื่อนามสกุล" style="width: 300px;" name="order_fullname">
             </div>
+            <br>
             <div class="form-group">
                 <label for="exampleInputAddress">ที่อยู่</label>
                 <textarea class="form-control" rows="3" style="width: 500px;" name="order_address" id="order_address"></textarea>
             </div>
+            <br>
             <div class="form-group">
                 <label for="exampleInputPhone">เบอร์โทรศัพท์</label>
                 <input type="text" class="form-control" id="order_phone" placeholder="ใส่เบอร์โทรศัพท์ที่สามารถติดต่อได้" style="width: 300px;" name="order_phone">
             </div>
+            <br>
             <table class="table table-striped table-bordered">
                 <thead>
                     <tr>
@@ -165,7 +169,7 @@ $num++;
                         <td colspan="8" style="text-align: right;">
                             <input type="hidden" name="formid" value="<?php echo $_SESSION['formid']; ?>" />
                             <a href="cart.php" type="button" class="btn btn-danger btn-lg">ย้อนกลับ</a>
-                            <button type="submit" class="btn btn-primary btn-lg">บันทึกการสั่งซื้อสินค้า</button>
+                            <button type="submit" class="btn btn-success btn-lg">บันทึกการสั่งซื้อสินค้า</button>
                         </td>
                     </tr>
                 </tbody>

@@ -36,7 +36,7 @@ $meCount = 0;
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>itoffside.com shopping cart</title>
+    <title>Shopping cart</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
 </head>
 <body>
@@ -92,7 +92,7 @@ $meCount = 0;
                 <td>
                     <a class="btn btn-danger btn-lg" href="removecart.php?itemId=<?php echo $meResult['pro_id']; ?>" role="button">
                     <span class="glyphicon glyphicon-trash"></span>
-                    ลบทิ้ง</a>
+                    ลบ</a>
                 </td>
             </tr>
             <?php
@@ -106,8 +106,8 @@ $meCount = 0;
             </tr>
             <tr>
                 <td colspan="8" style="text-align: right;">
-                <button type="submit" class="btn btn-info btn-lg">คำนวณราคาสินค้าใหม่</button>
-                <a href="order.php" type="button" class="btn btn-primary btn-lg">สังซื้อสินค้า</a>
+                <button type="submit" class="btn btn-primary btn-lg">คำนวณราคาสินค้าใหม่</button>
+                <a href="order.php" type="button" class="btn btn-success btn-lg">สั่งซื้อสินค้า</a>
                 </td>
             </tr>
             </tbody>

@@ -26,7 +26,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" href="fav.png">
-    <title>shop</title>
+    <title>Shop</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
 </head>
   <body>
@@ -77,7 +77,7 @@
                         <div class="card-footer p-4 pt-0 border-top-0 bg-transparent text-center">
                         <a class="btn btn-outline-Light mt-auto text-white" href="updatecart.php?itemId=<?php echo $meResult['pro_id']; ?>" role="button">
                         <span class="glyphicon glyphicon-shopping-cart"></span>
-                        add to cart</a>
+                        Add to Cart</a>
                         
                         </div>
                     </div>
