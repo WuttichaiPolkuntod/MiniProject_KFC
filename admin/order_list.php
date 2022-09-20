@@ -25,10 +25,10 @@
         include 'navbar_admin.php';
         include '../connect.php';
     ?>
-
+    <br>
     <div class="container">
         <div class="card">
-            <div class="card-header bg-primary text-white">รายการสั่งซื้อของฉัน</div>
+            <div class="card-header bg-danger text-white">รายการสั่งซื้อของฉัน</div>
             <div class="card-body">
                 <table class="table table-striped">
                     <tr>
