@@ -19,7 +19,10 @@
                 $sql2="SELECT username FROM user WHERE username='$username'";
                 $result2=$con->query($sql2);
                 $num=mysqli_num_rows($result2);
-                if($num==1){
+                $sql3="SELECT cus_id FROM customer WHERE cus_id='$username'";
+                $result3=$con->query($sql3);
+                $num3=mysqli_num_rows($result3);
+                if($num==1||$num3==1){
                     echo "<script>alert('Username นี้มีอยู่แล้ว')</script>";
                 }
                 else{
@@ -49,6 +52,19 @@
     }
     # Adduser
 ?> 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit User</title>
+    <link rel="icon" href="edit.png" />
+</head>
+<body>
+    
+</body>
+</html>
 <div class="container mt-5 w-75">
 <div class="row">
         <div class="col-4">

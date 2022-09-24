@@ -19,7 +19,7 @@
 				session_start();
             	$_SESSION['username']=$row2['username'];
             	$_SESSION['name']=$row2['name'];
-				header("location:admin/index.php");
+				header("location:admin/home.php");
 			}
 			else{
 				session_start();
@@ -37,6 +37,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+	<link rel="icon" href="fav.png" />
 	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
 
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">

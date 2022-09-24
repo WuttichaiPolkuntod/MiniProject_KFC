@@ -18,7 +18,10 @@
                 $sql2="SELECT cus_id FROM customer WHERE cus_id='$username'";
                 $result2=$con->query($sql2);
                 $num=mysqli_num_rows($result2);
-                if($num==1){
+                $sql3="SELECT username FROM user WHERE username='$username'";
+                $result3=$con->query($sql3);
+                $num3=mysqli_num_rows($result3);
+                if($num==1 || $num3==1){
                     echo "<script>alert('Username นี้มีอยู่แล้ว')</script>";
                 }
                 else{
@@ -64,6 +67,7 @@
 
     <!-- Title Page-->
     <title>Signup page</title>
+    <link rel="icon" href="fav.png" />
 
     <!-- Icons font CSS-->
     <link href="signup/vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
