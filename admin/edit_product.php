@@ -12,7 +12,7 @@
         $amount=$_POST['qty'];
         $details=$_POST['details'];
         $filename=$_FILES['pro_pic']['name'];
-        if(isset($filename)){
+        if($filename!=""){
             @unlink('pro_pic/'.$row['pro_pic']);
             move_uploaded_file($_FILES['pro_pic']['tmp_name'],'product_pic/'.$filename);
             $sql="UPDATE product SET pro_name='$pro_name',pro_type='$pro_type',details='$details',pro_price='$pro_price',amount='$amount',pro_pic='$filename' WHERE pro_id='$pro_id'";
