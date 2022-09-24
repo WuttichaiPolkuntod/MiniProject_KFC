@@ -89,7 +89,7 @@
 									</div>
 		            </div>
 		          </form>
-		          <p class="text-center">Don't have an account? <a data-toggle="tab" href="#signup">Sign Up</a></p>
+		          <p class="text-center">Don't have an account? <a href="signup.php">Sign Up</a></p>
 		        </div>
 		      </div>
 				</div>
