@@ -10,7 +10,7 @@
         $name=$_POST['name'];
         $email=$_POST['email'];
         $filename=$_FILES['user_pic']['name'];
-        if(isset($filename)){
+        if($filename!=""){
             @unlink('user_pic/'.$row['user_pic']);
             move_uploaded_file($_FILES['user_pic']['tmp_name'],'user_pic/'.$filename);
             $sql="UPDATE user SET password='$password',name='$name',email='$email',user_pic='$filename' WHERE username='$username'";
