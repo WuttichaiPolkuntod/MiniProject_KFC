@@ -2,8 +2,19 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+
        <!-- Core theme CSS (includes Bootstrap)-->
         <link href="test/css/styles.css" rel="stylesheet" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@200&display=swap" rel="stylesheet">
+
+        <!-- Title Icon -->
+        <link rel="icon" href="fav.png" />
+
+        <!-- Font CSS -->
+        <link href="Admin/CSS/font.css" rel="stylesheet" />
+
 <nav class="navbar navbar-expand-lg navbar-light bg-danger">
             <div class="container px-4 px-lg-5">
                 <a class="navbar-brand text-white" href="#!">KFC Shop</a>

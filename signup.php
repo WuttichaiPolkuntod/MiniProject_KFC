@@ -66,12 +66,13 @@
     <meta name="keywords" content="Colorlib Templates">
 
     <!-- Title Page-->
-    <title>Signup page</title>
+    <title>Sign Up</title>
     <link rel="icon" href="fav.png" />
 
     <!-- Icons font CSS-->
     <link href="signup/vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
     <link href="signup/vendor/font-awesome-4.7/css/font-awesome.min.css" rel="stylesheet" media="all">
+    
     <!-- Font special for pages-->
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
 
@@ -84,11 +85,11 @@
 </head>
 
 <body>
-    <div class="page-wrapper bg-gra-02 p-t-130 p-b-100 font-poppins">
+    <div class="page-wrapper  p-t-130 p-b-100 font-poppins" style="background-image: url(admin/login/images/login.jpg)">
         <div class="wrapper wrapper--w680">
             <div class="card card-4">
                 <div class="card-body">
-                    <h2 class="title">Registration Form</h2>
+                    <h2 class="title">Sign Up</h2>
                     <form action="<?php $_SERVER['PHP_SELF']?>" method="POST">
                         <div class="row row-space">
                             <div class="col-2">

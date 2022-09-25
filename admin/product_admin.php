@@ -67,6 +67,9 @@
         </button>
     </div>
 </div>
+<div class="card">
+            <div class="card-header bg-danger text-white">รายการ Product</div>
+            <div class="card-body">
     <table class="table table-striped">
         <tr class="bg-danger">
             <th class="text-white">ลำดับที่</th>
@@ -98,6 +101,8 @@
         </tr>
         <?php } ?>
     </table>
+</div>
+</div>
 </div>
 
 <!-- Addproduct Modal -->
